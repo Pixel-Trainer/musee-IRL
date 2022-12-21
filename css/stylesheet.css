@@ -1,0 +1,790 @@
+:root {
+    /*Primary colors*/
+    --primary-light-yellow: #F9E5AB;
+    --primary-light-pink: #EAAAAE;
+    --primary-light-purple: #8B8BD6;
+
+    /*Secondary colors*/
+    --secondary-light-green: #ABDDAF;
+    --secondary-light-blue: #79C9E2;
+
+    /*Neutral colors*/
+    --neutral-black: #262626;
+    --neutral-dark-grey: #8C8C8C;
+    --neutral-light-grey: #EBEAEB;
+    --neutral-white: ;
+
+    /*Typo*/
+    --font-nunito: 'Nunito', sans-serif;
+    --font-nunito-sans: 'Nunito Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: var(--font-nunito-sans);
+}
+
+a {
+    color: var(--neutral-black);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding-top: 80px;
+}
+
+nav ul {
+    margin: 30px 60px;
+}
+
+
+ul li {
+    display: inline;
+    font-size: 14px;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+.logo-nav {
+    width: 100px;
+    margin-left: 60px;
+}
+
+h1 {
+    font-family: var(--font-nunito);
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#hero-paragraphe {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+#hero {
+    background-image: url(/img/hero.png);
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    padding: 0 60px;
+    display: flex;
+    align-items: center;
+}
+
+#hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 50%;
+}
+
+.cta {
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 18px 30px;
+    background-color: var(--primary-light-purple);
+    border-radius: 40px;
+    /* display: inline-block; */
+    /* pour éviter que le CTA stretch avec le flex */
+    /* align-self: start; */
+    width: fit-content;
+}
+
+.cta:hover {
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: var(--font-nunito);
+    font-weight: 900;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-family: var(--font-nunito);
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+h6 {
+    font-family: var(--font-nunito-sans);
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-family: var(--font-nunito-sans);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+#expositions {
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px
+}
+
+.card-container {
+    display: flex;
+    gap: 30px;
+}
+
+.card {
+    width: 50%;
+    border-radius: 20px;
+    /* éviter que l'image sorte de la card = clip content de Figma */
+    overflow: hidden;
+    /* fonctionne avec le tag qui est en absolute */
+    position: relative;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.card:hover {
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 10px;
+    margin: 30px;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+}
+
+.tag {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background-color: var(--primary-light-pink);
+    text-transform: uppercase;
+    padding: 8px 20px 5px 20px;
+    border-radius: 20px;
+}
+
+.en-ce-moment {
+    background-color: var(--primary-light-yellow);
+}
+
+.card-content span {
+    font-weight: bold;
+}
+
+#evenements {
+    background-color: var(--primary-light-yellow);
+    padding: 120px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#presentation {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 120px auto;
+    width: 50%;
+}
+
+.presentation-content {
+    /* évite de mettre des <br> entre mes <p> */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#footer {
+    background-color: var(--neutral-black);
+    display: flex;
+    justify-content: space-between;
+    padding: 60px;
+    /* en lien avec le copyright */
+    position: relative;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    gap: 30px
+}
+
+.footer-content {
+    display: flex;
+    color: white;
+    justify-content: space-between;
+}
+
+.footer-content a {
+    color: white;
+    font-style: normal;
+}
+
+.logo-footer {
+    margin-top: 30px;
+    width: 200px;
+}
+
+#copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+    font-size: 10px;
+}
+
+.legals {
+    display: flex;
+    flex-direction: column;
+}
+
+#social-media ul {
+    margin-left: 0px;
+    padding-right: 60px;
+}
+
+#social-media li {
+    margin-left: 20px;
+}
+
+
+/* MUSEE */
+
+#musee-presentation {
+    background-image: url(/img/musee.webp);
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#ambition {
+    background-color: var(--primary-light-pink);
+    padding: 120px 0;
+}
+
+.ambition-container,
+#valeurs {
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 0px auto;
+    width: 50%;
+}
+
+#valeurs {
+    margin: 120px auto;
+}
+
+
+/* EXPOSITIONS */
+
+.dropdown-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-column {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    gap: 20px;
+}
+
+.dropdown {
+    position: relative;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 20px
+}
+
+.dropdown:hover {
+    box-shadow: 10px 10px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-chevron {
+    position: absolute;
+    right: 20px;
+    top: 28px;
+}
+
+#toggle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+}
+
+#toggle:checked~div {
+    display: none;
+}
+
+#toggle:not(:checked)~div {
+    display: flex;
+}
+
+#toggle:not(:checked)~img {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+#permanentes {
+    background-color: var(--primary-light-purple);
+    padding: 120px 40px;
+}
+
+#permanentes h2 {
+    color: white;
+}
+
+.artistes {
+    font-style: italic;
+}
+
+.card-expo {
+    background-color: white;
+    display: flex;
+    height: auto;
+    border-radius: 20px;
+    /* pour que l'image ne dépasse pas de la card */
+    overflow: hidden;
+    margin: 40px 0;
+}
+
+.card-expo-img {
+    width: 55%;
+}
+
+.card-expo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-expo-content {
+    width: 50%;
+    /* padding: 60px 30px; */
+    margin: 60px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#temporaires {
+    padding: 120px 40px;
+}
+
+#temporaires span {
+    font-weight: bold;
+}
+
+.planning-container {
+    margin: 60px 0px;
+}
+
+.planning-month-container {
+    margin: 60px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.planning-card {
+    display: flex;
+    max-width: 950px;
+    border-radius: 20px;
+    /* éviter que l'image sorte de la card = clip content de Figma */
+    overflow: hidden;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.planning-card img {
+    width: 400px;
+    border-radius: 20px 0 0 20px;
+}
+
+.planning-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 20px 20px
+}
+
+.mois {
+    font-weight: 900;
+}
+
+
+/* VISITER */
+
+.social-media li {
+    margin-left: 0;
+    padding-right: 15px;
+}
+
+#visiter {
+    margin: 120px 60px;
+}
+
+.map-container {
+    display: flex;
+    align-items: center;
+    margin: 40px 0px;
+    gap: 30px;
+}
+
+.accessibilité-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 60px;
+}
+
+.accessibilité-bloc {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infos-container {
+    display: flex;
+    gap: 30px;
+    margin: 60px 0 0 0;
+}
+
+.infos-container h3 {
+    margin-bottom: 15px;
+}
+
+.infos-container address {
+    font-style: normal;
+}
+
+#visiter span {
+    font-weight: bold;
+}
+
+.infos-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 60px;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 600px) {
+
+    /* NAV BAR */
+
+    .logo-nav {
+        width: 100px;
+        margin: 30px 0 30px 30px;
+    }
+
+    nav ul {
+        margin: 30px 30px 30px 0;
+        display: flex;
+        /* justify-content: space-between; */
+        justify-content: flex-end;
+        flex-wrap: wrap;
+        /* align-content: space-between; */
+    }
+
+    nav ul li {
+        margin-left: 15px;
+    }
+
+    nav ul li:last-child {
+        margin-top: 30px;
+    }
+
+
+    /* ACCUEIL */
+
+    h1 {
+        font-size: 28px;
+    }
+
+    #hero-paragraphe {
+        font-size: 22px;
+    }
+
+    #hero {
+        padding: 0 30px;
+    }
+
+    #hero-text {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 800px) {
+
+    /* NAV BAR  */
+
+    .logo-nav {
+        width: 100px;
+        margin: 10px 0 10px 30px;
+    }
+
+    nav ul {
+        margin: 30px 30px 30px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    ul li {
+        margin-left: 15px;
+    }
+
+    /* ACCUEIL */
+
+    #hero-text {
+        width: 75%;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+
+    /* ACCUEIL */
+
+    #expositions {
+        padding: 100px 30px;
+    }
+
+    .card-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    #evenements {
+        padding: 100px 30px;
+    }
+
+    #presentation {
+        margin: 100px auto;
+        width: 85%;
+    }
+
+    /* EXPOSITIONS */
+
+    .card-expo {
+        flex-direction: column;
+    }
+
+    #reverse {
+        flex-direction: column-reverse;
+    }
+
+    .card-expo-img {
+        width: 100%;
+    }
+
+    .card-expo-content {
+        width: 90%;
+    }
+
+    /* VISITER */
+
+    #visiter {
+        margin: 100px 30px;
+    }
+
+    .map-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .map-container iframe {
+        width: 100%;
+    }
+
+    .accessibilité-container {
+        width: 70%;
+    }
+
+    .infos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .infos-content {
+        width: 70%;
+    }
+
+    /* MUSEE */
+
+    #valeurs {
+        margin: 100px auto;
+        width: 85%;
+    }
+
+    .ambition-container {
+        margin: 0 auto;
+        width: 85%;
+    }
+
+    #ambition {
+        padding: 100px 0;
+    }
+
+}
+
+@media screen and (min-width: 801px) and (max-width: 1100px) {
+
+    /* VISITER */
+
+    #visiter {
+        margin: 100px 60px;
+    }
+
+    .map-container {
+        flex-direction: column;
+        gap: 60px;
+        /* margin: 60px 200px 60px 200px; */
+    }
+
+    .map-container iframe {
+        width: 100%;
+    }
+
+    .infos-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        /* margin: 60px 200px 60px 200px; */
+    }
+
+}
+
+@media screen and (max-width: 1100px) {
+
+
+    /* FOOTER */
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 30px;
+        gap: 100px;
+    }
+
+    .footer-container {
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+        margin: 0 auto;
+    }
+
+    .logo-footer {
+        margin-top: 0;
+        width: 150px;
+    }
+
+    #social-media ul {
+        padding-right: 0;
+    }
+
+    #social-media li {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    /* EXPOSITIONS */
+
+    .dropdown-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .dropdown-column {
+        width: 100%;
+    }
+
+    /* EXPOSITIONS */
+
+    .planning-card {
+        flex-direction: column;
+        max-width: 320px;
+        box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .planning-card img {
+        border-radius: 0px;
+    }
+
+    .planning-month-container {
+        margin: 30px 0 0 0;
+        align-items: center;
+    }
+
+}
